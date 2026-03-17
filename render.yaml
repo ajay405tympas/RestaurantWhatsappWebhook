@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: restaurant-whatsapp-webhook
+    runtime: node
+    plan: free
+    buildCommand: yarn install --frozen-lockfile
+    startCommand: node app.js
+    envVars:
+      - key: NODE_ENV
+        value: production
